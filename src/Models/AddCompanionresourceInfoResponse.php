@@ -1,0 +1,61 @@
+<?php
+
+// This file is auto-generated, don't edit it. Thanks.
+namespace AlibabaCloud\SDK\vod\V20170314\Models;
+
+use AlibabaCloud\Tea\Model;
+
+class AddCompanionresourceInfoResponse extends Model {
+    protected $_name = [
+        'requestId' => 'RequestId',
+        'result' => 'Result',
+        'companionresourceId' => 'CompanionresourceId',
+    ];
+    public function validate() {
+        Model::validateRequired('requestId', $this->requestId, true);
+        Model::validateRequired('result', $this->result, true);
+        Model::validateRequired('companionresourceId', $this->companionresourceId, true);
+    }
+    public function toMap() {
+        $res = [];
+        $res['RequestId'] = $this->requestId;
+        $res['Result'] = $this->result;
+        $res['CompanionresourceId'] = $this->companionresourceId;
+        return $res;
+    }
+    /**
+     * @param array $map
+     * @return AddCompanionresourceInfoResponse
+     */
+    public static function fromMap($map = []) {
+        $model = new self();
+        if(isset($map['RequestId'])){
+            $model->requestId = $map['RequestId'];
+        }
+        if(isset($map['Result'])){
+            $model->result = $map['Result'];
+        }
+        if(isset($map['CompanionresourceId'])){
+            $model->companionresourceId = $map['CompanionresourceId'];
+        }
+        return $model;
+    }
+    /**
+     * @description requestId
+     * @var string
+     */
+    public $requestId;
+
+    /**
+     * @description data.result
+     * @var bool
+     */
+    public $result;
+
+    /**
+     * @description data.companionresourceId
+     * @var string
+     */
+    public $companionresourceId;
+
+}
